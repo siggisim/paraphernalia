@@ -5,10 +5,13 @@ git_repository(
 )
 
 load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains", "go_repository")
+
 go_rules_dependencies()
+
 go_register_toolchains()
 
 load("@io_bazel_rules_go//proto:def.bzl", "proto_register_toolchains")
+
 proto_register_toolchains()
 
 go_repository(
@@ -73,7 +76,7 @@ go_repository(
 
 go_repository(
     name = "com_github_square_certstrap",
-    commit = "fa1359e6e510efcf9cd67bc0edbe43d7300a7833",
-    importpath = "github.com/square/certstrap",
     build_file_generation = "on",
+    commit = "bd8b02aa8c1b81bc5cfc070722a1a894a348f00a",
+    importpath = "github.com/square/certstrap",
 )
